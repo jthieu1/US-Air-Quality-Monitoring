@@ -1,0 +1,10 @@
+[
+  {"DateIssue":"2022-06-21 ","DateForecast":"2022-06-21 ","ReportingArea":"Lynn","StateCode":"MA","Latitude":42.4744,"Longitude":-70.9725,"ParameterName":"O3","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""},
+  {"DateIssue":"2022-06-21 ","DateForecast":"2022-06-21 ","ReportingArea":"Lynn","StateCode":"MA","Latitude":42.4744,"Longitude":-70.9725,"ParameterName":"PM2.5","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""},
+  {"DateIssue":"2022-06-21 ","DateForecast":"2022-06-22 ","ReportingArea":"Lynn","StateCode":"MA","Latitude":42.4744,"Longitude":-70.9725,"ParameterName":"O3","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""},
+  {"DateIssue":"2022-06-21 ","DateForecast":"2022-06-22 ","ReportingArea":"Lynn","StateCode":"MA","Latitude":42.4744,"Longitude":-70.9725,"ParameterName":"PM2.5","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""},
+  {"DateIssue":"2022-06-21 ","DateForecast":"2022-06-23 ","ReportingArea":"Lynn","StateCode":"MA","Latitude":42.4744,"Longitude":-70.9725,"ParameterName":"O3","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""},
+  {"DateIssue":"2022-06-21 ","DateForecast":"2022-06-23 ","ReportingArea":"Lynn","StateCode":"MA","Latitude":42.4744,"Longitude":-70.9725,"ParameterName":"PM2.5","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""},
+  {"DateIssue":"2022-06-21 ","DateForecast":"2022-06-24 ","ReportingArea":"Lynn","StateCode":"MA","Latitude":42.4744,"Longitude":-70.9725,"ParameterName":"O3","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""},
+  {"DateIssue":"2022-06-21 ","DateForecast":"2022-06-24 ","ReportingArea":"Lynn","StateCode":"MA","Latitude":42.4744,"Longitude":-70.9725,"ParameterName":"PM2.5","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""}
+]
