@@ -28,7 +28,7 @@ def pull_data():
             print("Please enter a valid value for miles.")
             pass
 
-      link = f"https://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode={user_zip}&date={user_date}&distance={int(user_distance)}&API_KEY=E7C77666-4F3C-4065-B861-F5CCCC069C00"
+      link = f"https://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode={user_zip}&date={user_date}&distance={int(user_distance)}&API_KEY=2D61DE65-ECB2-4E5E-B2F0-46CB789F0C84"
 
       air_API = requests.get(link)
       aqi_list = []     # will be used to store the AQI values
