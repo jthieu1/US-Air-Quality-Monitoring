@@ -7,6 +7,7 @@ import zipcodes
 import datetime
 
 
+
 # payload = {} air_API = requests.post('https://www.airnowapi.org/aq/forecast/zipCode/?format=text/csv&zipCode=02148
 # &date=2022-06-21&distance=25&API_KEY=E7C77666-4F3C-4065-B861-F5CCCC069C00', data=payload)
 
