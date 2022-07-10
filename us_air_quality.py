@@ -36,24 +36,25 @@ def pull_data():
 
     link = f"https://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode={user_zip}&date={user_date}&distance={int(user_distance)}&API_KEY=2D61DE65-ECB2-4E5E-B2F0-46CB789F0C84"
 
-    air_API = requests.get(link)
+    air_api = requests.get(link)
     aqi_list = []  # will be used to store the AQI values
-    city_info = ""
-    # converts the air_API text form into JSON, this is now a list that looks like this [{"DateIssue":...},
+
+    # converts the air_api text form into JSON, this is now a list that looks like this [{"DateIssue":...},
     # {"DateIssue":...}, ...]
-    air_JSON = json.loads(air_API.text)
+    air_json = json.loads(air_api.text)
 
-    # Iterate through every dict in the air_JSON list, grab the value to the key you want, we want AQI, so access it
+    # Iterate through every dict in the air_json list, grab the value to the key you want, we want AQI, so access it
     # directly via dict["AQI"]
-    for dict in air_JSON:
-        aqi_list.append(dict["AQI"])
+    for some_dict in air_json:
+        aqi_list.append(some_dict["AQI"])
 
-    if air_JSON:    # if air_JSON is not a blank list
-        city_info = [air_JSON[0]["ReportingArea"], air_JSON[0]["StateCode"]]
+    if air_json:    # if air_json is not a blank list
+        city_info = [air_json[0]["ReportingArea"], air_json[0]["StateCode"]]
         output = f"The AQI Index for {city_info[0]}, {city_info[1]} on {user_date} is {aqi_list}."
         print(output)
     else:
         print(f"Sorry, that location did not record its AQI index for {user_date}.")
+        # loop back and ask user to try again
 
 
 pull_data()
