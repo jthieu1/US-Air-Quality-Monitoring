@@ -1,13 +1,14 @@
 # US Air Quality Monitoring Project
 # By Dan and Jenny
 
+from tkinter import Y
 import requests
 import json
 import zipcodes
 from datetime import datetime
 
 
-def pull_data():
+def pull_aqi_data():
     print("Welcome to the Air Quality Monitoring program. If you would like to obtain weather data, please enter the "
           "following:")
 
@@ -54,7 +55,14 @@ def pull_data():
         print(output)
     else:
         print(f"Sorry, that location did not record its AQI index for {user_date}.")
-        # loop back and ask user to try again
+        loop_back = input("Would you like to find the AQI index for a different date or location? Y/N ").upper()
+        if loop_back == "Y" or "YES":
+            pull_aqi_data()
+        if loop_back == "N" or "NO":
+            print("Have a nice day.")
+        else:
+            print("Please enter a valid choice.")
+            loop_back = input("Would you like to find the AQI index for a different date or location? Y/N ").upper()
 
 
-pull_data()
+pull_aqi_data()
