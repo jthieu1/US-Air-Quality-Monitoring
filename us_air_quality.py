@@ -4,15 +4,7 @@
 import requests
 import json
 import zipcodes
-import datetime
-
-
-
-# payload = {} air_API = requests.post('https://www.airnowapi.org/aq/forecast/zipCode/?format=text/csv&zipCode=02148
-# &date=2022-06-21&distance=25&API_KEY=E7C77666-4F3C-4065-B861-F5CCCC069C00', data=payload)
-
-def distance_valid(num):
-    return num.isNumeric() and num < 0
+from datetime import datetime
 
 
 def pull_data():
@@ -24,11 +16,18 @@ def pull_data():
         print("Please enter a valid value for zipcode.")
         user_zip = input("What is your zip code? ")
 
-    user_date = input("When is the date? (YYYY/MM/DD) ")
-    year, month, day = user_date.split('-')
-    while not datetime.date(int(year) > 2003, int(month) > 1, int(day) > 1):
-        print("Please enter a valid date in the format YYYY-MM-DD.")
+    date_format = "%Y-%m-%d"
+    res = False
+
+    while not res:  # Runs while res = False
         user_date = input("When is the date? (YYYY-MM-DD) ")
+        year, month, day = user_date.split('-')
+
+        if 2004 <= int(year) <= 2022:
+            res = bool(datetime.strptime(user_date, date_format))
+        else:
+            res = False
+            print("Please enter a valid date in the format YYYY-MM-DD.")
 
     user_distance = input("How far are you searching for the radius to your location? (mi) ")
     while not user_distance.isdigit():
