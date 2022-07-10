@@ -38,7 +38,7 @@ def pull_data():
 
     air_API = requests.get(link)
     aqi_list = []  # will be used to store the AQI values
-
+    city_info = ""
     # converts the air_API text form into JSON, this is now a list that looks like this [{"DateIssue":...},
     # {"DateIssue":...}, ...]
     air_JSON = json.loads(air_API.text)
@@ -48,7 +48,12 @@ def pull_data():
     for dict in air_JSON:
         aqi_list.append(dict["AQI"])
 
-    print(aqi_list)
+    if air_JSON:    # if air_JSON is not a blank list
+        city_info = [air_JSON[0]["ReportingArea"], air_JSON[0]["StateCode"]]
+        output = f"The AQI Index for {city_info[0]}, {city_info[1]} on {user_date} is {aqi_list}."
+        print(output)
+    else:
+        print(f"Sorry, that location did not record its AQI index for {user_date}.")
 
 
 pull_data()
